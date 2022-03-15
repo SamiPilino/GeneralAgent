@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '<#PROJECT TITLE#>'
-copyright = '2021, OSU HART'
-author = 'OSU HART'
+project = 'GeneralAgent'
+copyright = '2021, SamiPilino'
+author = 'SamiPilino'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.0'

@@ -1,13 +1,13 @@
-Welcome to <#PROJECT TITLE#>'s documentation!
+Welcome to GeneralAgent's documentation!
 ==============================================
 
 .. toctree::
    :maxdepth: 3
 
-   introduction
-   overview
-   getting_started
-   installing
-   download
-   contributing
-   roadmap
+   Explanations/introduction
+   Explanations/overview
+   Tutorials/getting_started
+   Tutorials/installing
+   Reference/download
+   HowTos/contributing
+   Reference/roadmap
