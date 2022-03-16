@@ -93,7 +93,7 @@ Getting Started
 ---------------------
 <!-- This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps. -->
 1. Clone this repo into your project as `agents/`
-    ```terminal
+    ```
     $ git clone https://github.com/SamiPilino/GeneralAgent.git agents/
     ```
 
@@ -144,7 +144,7 @@ Usage
         main()
     ```
 5. Run your agent with
-    ```terminal
+    ```
     $ python agent.py
     ```
 <!-- 
