@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; GeneralAgent 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project Overview" href="overview.html" />
+    <link rel="prev" title="Welcome to GeneralAgent’s documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<!-- Describe the project and its purpose
+The goal of this project is to build/create/provide…[the what]… for …[the who]… so that she/he/they can …[the why]. We aim to accomplish this with …[the how]…[the where]… by/on/before …[the when].
+--><p>This project is an attempt at describing the main parts of an AI/ML agent, whether it’s just a simple reflex agent, model-based reflex agent, goal-based agent, or a utility agent. It is intented to make it easier to automate a wide variety of tasks by allowing developers to focus more on improving and optimizing the agent’s main components rather than having to worry about how those components fit together to form the whole agent, and by breaking the process into smaller steps that build upon each other as the agent’s capabilities are expanded and iterated upon.</p>
+<p>This complexity progression for AI/ML agents is defined as follows:</p>
+<ol class="simple">
+<li><p>“Agent” always performs the same <strong>Action</strong> and the output is always the same regardless of the input</p>
+<ul class="simple">
+<li><p>i.e. An “agent” that always prints out “Hello, World!”</p></li>
+</ul>
+</li>
+<li><p>“Agent” always performs the same Action, but the output changes based on the input <strong>Parameters</strong></p>
+<ul class="simple">
+<li><p>i.e. An “agent” that always doubles the input</p></li>
+</ul>
+</li>
+<li><p>Agent uses the input and some <strong>Conditional Logic</strong> to decide which action to perform</p>
+<ul class="simple">
+<li><p>i.e. An agent that can either add, subtract, multiply, or divide a number depending on the command you provide</p></li>
+</ul>
+</li>
+<li><p>Agent can keep track of previous <strong>States</strong> so it doesn’t have to depend completely upon the current precept</p>
+<ul class="simple">
+<li><p>i.e. An robotic lawnmower agent that remembers where it has already mowed so that it doesn’t try to mow grass that has already been mowed</p></li>
+</ul>
+</li>
+<li><p>Agent can update its mental “snapshots” according to some <strong>System Dynamics</strong> (Understanding about how the relevant environment changes over time assuming no action from the agent)</p></li>
+<li><p>Agent can update its mental “snapshots” according to some <strong>Control Dynamics</strong> (Understanding about how the relevant environment changes as a result of the agent’s actions)</p></li>
+<li><p>Agent can use the System and Control Dynamics to <strong>Speculate</strong> about possible future states caused by taking performing certain actions</p></li>
+<li><p>Agent can determine the usefulness of possible future states using a <strong>Utility Function</strong></p></li>
+<li><p>Agent uses a <strong>Critic</strong> to measure its performance</p></li>
+<li><p>Agent uses the Critic to compare its performance to some <strong>Performance Standard</strong> (which can be either internal or, perhaps more likely, external)</p></li>
+<li><p>Agent uses a <strong>Learning Element</strong> to adjust the performance parameters of the performance element based on feedback from the Critic</p></li>
+<li><p>Agent uses a <strong>Problem Generator</strong> to create practice problems to challenge itself to learn concepts it doesn’t understand very well</p></li>
+<li><p>Agent continues to improve its Speculator by actively trying to learn and anticipate the actions of <strong>Other Agents</strong> and how they could affect the environment as well as the agent’s own decision-making process</p></li>
+<li><p>Agent focuses on <strong>Competition</strong> with other agents</p></li>
+<li><p>Agent focuses on <strong>Communication, Negotiation, and Other Collaborative Efforts</strong> with other agents so that it no longer has to compete for resources</p></li>
+</ol>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">GeneralAgent</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials/installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reference/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HowTos/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reference/roadmap.html">Roadmap</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to GeneralAgent’s documentation!</a></li>
+      <li>Next: <a href="overview.html" title="next chapter">Project Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, SamiPilino.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Explanations/introduction.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started &#8212; GeneralAgent 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing" href="installing.html" />
+    <link rel="prev" title="Project Overview" href="../Explanations/overview.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<ol>
+<li><p>Import the agent component types you need for your project</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">agents</span> <span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Action</span><span class="p">,</span> <span class="n">Speculator</span><span class="p">,</span> <span class="n">PerformanceElement</span>
+</pre></div>
+</div>
+</li>
+<li><p>Import your agent component definitions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">my_agent</span>
+</pre></div>
+</div>
+</li>
+<li><p>Import your action modules</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">my_action_module</span>
+</pre></div>
+</div>
+</li>
+<li><p>Initialize and run the agent</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Define actions the agent can take</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">Action</span><span class="p">(</span><span class="s2">&quot;Agent Main Loop&quot;</span><span class="p">,</span> <span class="n">my_action_module</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="n">input_types</span><span class="o">=</span><span class="s2">&quot;PreviousState&quot;</span><span class="p">,</span> <span class="n">output_types</span><span class="o">=</span><span class="s2">&quot;NextState&quot;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Initialize the agent</span>
+    <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+        <span class="n">PerformanceElement</span><span class="p">(</span>
+            <span class="n">actions</span><span class="p">,</span>
+            <span class="n">my_agent</span><span class="o">.</span><span class="n">conditionalLogic</span><span class="p">,</span>
+            <span class="n">Speculator</span><span class="p">(</span>
+                <span class="n">my_agent</span><span class="o">.</span><span class="n">systemDynamics</span><span class="p">,</span>
+                <span class="n">my_agent</span><span class="o">.</span><span class="n">controlDynamics</span>
+            <span class="p">),</span>
+            <span class="n">my_agent</span><span class="o">.</span><span class="n">utilityFunction</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Define the starting state</span>
+    <span class="n">initial_state</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Run the agent</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">initial_state</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run your agent with</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ python agent.py
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">GeneralAgent</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Explanations/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Explanations/overview.html">Project Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reference/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HowTos/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Reference/roadmap.html">Roadmap</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../Explanations/overview.html" title="previous chapter">Project Overview</a></li>
+      <li>Next: <a href="installing.html" title="next chapter">Installing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, SamiPilino.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Tutorials/getting_started.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
